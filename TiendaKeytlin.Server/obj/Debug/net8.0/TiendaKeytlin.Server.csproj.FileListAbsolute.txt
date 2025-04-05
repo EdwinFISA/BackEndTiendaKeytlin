@@ -2003,10 +2003,10 @@ C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytli
 C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.TiendaKeytlin.Server.props
 C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.TiendaKeytlin.Server.props
 C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\TiendaKe.60798D30.Up2Date
 C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\TiendaKeytlin.Server.dll
 C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\refint\TiendaKeytlin.Server.dll
 C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\TiendaKeytlin.Server.pdb
 C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\TiendaKeytlin.Server.genruntimeconfig.cache
 C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\ref\TiendaKeytlin.Server.dll
+C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

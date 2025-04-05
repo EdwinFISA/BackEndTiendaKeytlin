@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using TiendaKeytlin.Server.Data;
@@ -11,9 +12,11 @@ using TiendaKeytlin.Server.Data;
 namespace TiendaKeytlin.Server.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250404120228_Permisos")]
+    partial class Permisos
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,35 +24,6 @@ namespace TiendaKeytlin.Server.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
-
-            modelBuilder.Entity("RolUsuario", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Nombre")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Roles");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Nombre = "Admin"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Nombre = "Vendedor"
-                        });
-                });
 
             modelBuilder.Entity("TiendaKeytlin.Server.Models.Empresa", b =>
                 {
@@ -334,6 +308,35 @@ namespace TiendaKeytlin.Server.Migrations
                     b.ToTable("RolPermisos");
                 });
 
+            modelBuilder.Entity("TiendaKeytlin.Server.Models.RolUsuario", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Roles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Nombre = "Admin"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Nombre = "Vendedor"
+                        });
+                });
+
             modelBuilder.Entity("TiendaKeytlin.Server.Models.Usuario", b =>
                 {
                     b.Property<int>("Id")
@@ -388,7 +391,7 @@ namespace TiendaKeytlin.Server.Migrations
 
             modelBuilder.Entity("TiendaKeytlin.Server.Models.Permiso", b =>
                 {
-                    b.HasOne("RolUsuario", null)
+                    b.HasOne("TiendaKeytlin.Server.Models.RolUsuario", null)
                         .WithMany("Permisos")
                         .HasForeignKey("RolUsuarioId");
                 });
@@ -401,7 +404,7 @@ namespace TiendaKeytlin.Server.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("RolUsuario", "Rol")
+                    b.HasOne("TiendaKeytlin.Server.Models.RolUsuario", "Rol")
                         .WithMany()
                         .HasForeignKey("RolId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -420,7 +423,7 @@ namespace TiendaKeytlin.Server.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("RolUsuario", "Rol")
+                    b.HasOne("TiendaKeytlin.Server.Models.RolUsuario", "Rol")
                         .WithMany("Usuarios")
                         .HasForeignKey("RolId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -431,15 +434,15 @@ namespace TiendaKeytlin.Server.Migrations
                     b.Navigation("Rol");
                 });
 
-            modelBuilder.Entity("RolUsuario", b =>
+            modelBuilder.Entity("TiendaKeytlin.Server.Models.EstadoUsuario", b =>
                 {
-                    b.Navigation("Permisos");
-
                     b.Navigation("Usuarios");
                 });
 
-            modelBuilder.Entity("TiendaKeytlin.Server.Models.EstadoUsuario", b =>
+            modelBuilder.Entity("TiendaKeytlin.Server.Models.RolUsuario", b =>
                 {
+                    b.Navigation("Permisos");
+
                     b.Navigation("Usuarios");
                 });
 #pragma warning restore 612, 618

@@ -96,6 +96,7 @@ namespace TiendaKeytlin.Server.Controllers
                     token = new JwtSecurityTokenHandler().WriteToken(token),
                     userId = usuario.Id,
                     userName = usuario.Nombre,
+                    userApellido = usuario.Apellido,
                     userEmail = usuario.Correo,
                     userRole = rol.Nombre
                 });

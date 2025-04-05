@@ -1,19 +1,19 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
+using TiendaKeytlin.Server.Models;
 
-namespace TiendaKeytlin.Server.Models
+public class RolUsuario
 {
-    public class RolUsuario
-    {
-        public RolUsuario()
-        {
-            Usuarios = new HashSet<Usuario>();
-        }
+  
+    public int Id { get; set; }
 
-        [Key]
-        public int Id { get; set; }
-        public string Nombre { get; set; }
+    [Required]
+    public string Nombre { get; set; }
 
-        public virtual ICollection<Usuario> Usuarios { get; set; }
-    }
+    // Ignorar la serialización de estas colecciones cuando se cree un rol
+    [JsonIgnore]
+    public ICollection<Usuario> Usuarios { get; set; } = new List<Usuario>();
+
+    [JsonIgnore]
+    public ICollection<Permiso> Permisos { get; set; } = new List<Permiso>();
 }
