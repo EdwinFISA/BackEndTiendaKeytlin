@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TiendaKeytlin.Server.DTOs;
+using TiendaKeytlin.Server.Attributes; // Asegúrate de que esta importación esté presente
 
 namespace TiendaKeytlin.Server.Controllers
 {
@@ -38,11 +39,11 @@ namespace TiendaKeytlin.Server.Controllers
             {
                 _logger.LogInformation("Obteniendo lista de usuarios");
                 var usuarios = await _context.Usuarios
+                    .Where(u => u.EstadoId == 1 || u.EstadoId == 2)
                     .Include(u => u.Estado)
                     .Include(u => u.Rol)
                     .ToListAsync();
 
-                // Mapeamos los datos para incluir solo el nombre del estado y rol
                 var usuariosResponse = usuarios.Select(usuario => new
                 {
                     usuario.Id,
@@ -51,8 +52,8 @@ namespace TiendaKeytlin.Server.Controllers
                     usuario.Correo,
                     usuario.Telefono,
                     usuario.FechaCreacion,
-                    Estado = usuario.Estado.Nombre,  // Aquí obtenemos el nombre del estado
-                    Rol = usuario.Rol.Nombre         // Aquí obtenemos el nombre del rol
+                    Estado = usuario.Estado.Nombre,
+                    Rol = usuario.Rol.Nombre
                 }).ToList();
 
                 return Ok(usuariosResponse);
@@ -99,7 +100,6 @@ namespace TiendaKeytlin.Server.Controllers
             {
                 _logger.LogInformation($"Iniciando creación de usuario: {usuarioDto.Correo}");
 
-                // Validaciones
                 if (string.IsNullOrEmpty(usuarioDto.Correo))
                 {
                     _logger.LogWarning("Intento de crear usuario sin correo electrónico");
@@ -117,7 +117,6 @@ namespace TiendaKeytlin.Server.Controllers
                     return BadRequest("El nombre y apellido son obligatorios.");
                 }
 
-                // Verificar si el usuario ya existe
                 var usuarioExistente = await _context.Usuarios
                     .FirstOrDefaultAsync(u => u.Correo == usuarioDto.Correo);
 
@@ -127,7 +126,6 @@ namespace TiendaKeytlin.Server.Controllers
                     return BadRequest("El correo electrónico ya está registrado.");
                 }
 
-                // Crear un nuevo usuario a partir del DTO
                 var usuario = new Usuario
                 {
                     Nombre = usuarioDto.Nombre,
@@ -144,7 +142,6 @@ namespace TiendaKeytlin.Server.Controllers
                 _context.Usuarios.Add(usuario);
                 await _context.SaveChangesAsync();
 
-                // Enviar correo electrónico
                 try
                 {
                     var emailModel = new EmailModel
@@ -165,7 +162,6 @@ namespace TiendaKeytlin.Server.Controllers
                     _logger.LogError($"Error al enviar correo a {usuario.Correo}: {ex.Message}");
                 }
 
-                // Crear una versión limpia del usuario para la respuesta
                 var usuarioResponse = new
                 {
                     usuario.Id,
@@ -205,16 +201,12 @@ namespace TiendaKeytlin.Server.Controllers
                     return NotFound($"No se encontró el usuario con ID {id}");
                 }
 
-                // Actualizar solo los campos permitidos (excluyendo Contrasena)
                 usuarioExistente.Nombre = usuarioDto.Nombre;
                 usuarioExistente.Apellido = usuarioDto.Apellido;
                 usuarioExistente.Correo = usuarioDto.Correo;
                 usuarioExistente.Telefono = usuarioDto.Telefono;
                 usuarioExistente.EstadoId = usuarioDto.EstadoId;
                 usuarioExistente.RolId = usuarioDto.RolId;
-
-                // No actualizar la contraseña bajo ningún concepto
-                // El campo Contrasena ni siquiera debería venir en el DTO
 
                 await _context.SaveChangesAsync();
                 _logger.LogInformation($"Usuario actualizado correctamente: {id}");
@@ -233,7 +225,6 @@ namespace TiendaKeytlin.Server.Controllers
             }
         }
 
-        // DELETE: api/usuario/{id}
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUsuario(int id)
         {
@@ -256,6 +247,32 @@ namespace TiendaKeytlin.Server.Controllers
             {
                 _logger.LogError($"Error al eliminar usuario {id}: {ex.Message}");
                 return StatusCode(500, "Error interno al eliminar el usuario");
+            }
+        }
+
+        [HttpPut("eliminar-logico/{id}")]
+        public async Task<IActionResult> EliminarLogicoUsuario(int id)
+        {
+            try
+            {
+                var usuario = await _context.Usuarios.FindAsync(id);
+                if (usuario == null)
+                {
+                    _logger.LogWarning($"Intento de eliminar lógicamente un usuario inexistente: {id}");
+                    return NotFound($"No se encontró el usuario con ID {id}");
+                }
+
+                usuario.EstadoId = 3; // Estado 3 = Eliminado lógicamente
+
+                await _context.SaveChangesAsync();
+
+                _logger.LogInformation($"Usuario eliminado lógicamente (EstadoId = 3): {id}");
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error al eliminar lógicamente el usuario {id}: {ex.Message}");
+                return StatusCode(500, "Error interno al eliminar lógicamente el usuario");
             }
         }
 

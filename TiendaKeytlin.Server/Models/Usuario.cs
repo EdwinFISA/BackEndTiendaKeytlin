@@ -20,6 +20,8 @@ namespace TiendaKeytlin.Server.Models
         public DateTime? UltimoInicioSesion { get; set; }
         public int EstadoId { get; set; }
         public int RolId { get; set; }
+        public string? CodigoRecuperacion { get; set; }
+        public DateTime? FechaExpiracionCodigo { get; set; }
 
         // Propiedades de navegación
         [JsonIgnore]

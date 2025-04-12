@@ -1,4 +1,4 @@
-﻿namespace TiendaKeytlin.Server.Models
+﻿namespace TiendaKeytlin.Server.DTOs
 {
     public class LoginDTO
     {

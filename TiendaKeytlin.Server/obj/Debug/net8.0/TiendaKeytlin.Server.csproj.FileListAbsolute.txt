@@ -1852,11 +1852,20 @@ C:\Users\guait\Desktop\TiendaKeytlinAngular-.netcore\TiendaKeytlinAngular-.netco
 C:\Users\guait\Desktop\TiendaKeytlinAngular-.netcore\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\TiendaKeytlin.Server.pdb
 C:\Users\guait\Desktop\TiendaKeytlinAngular-.netcore\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\TiendaKeytlin.Server.genruntimeconfig.cache
 C:\Users\guait\Desktop\TiendaKeytlinAngular-.netcore\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\ref\TiendaKeytlin.Server.dll
+C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\TiendaKeytlin.Server.csproj.AssemblyReference.cache
+C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\spa.proxy.json
+C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\TiendaKeytlin.Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\TiendaKeytlin.Server.AssemblyInfoInputs.cache
+C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\TiendaKeytlin.Server.AssemblyInfo.cs
+C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\TiendaKeytlin.Server.csproj.CoreCompileInputs.cache
+C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\TiendaKeytlin.Server.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\TiendaKeytlin.Server.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\TiendaKeytlin.Server.sourcelink.json
+C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\bin\Debug\net8.0\spa.proxy.json
 C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\bin\Debug\net8.0\appsettings.json
 C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\bin\Debug\net8.0\package-lock.json
 C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\bin\Debug\net8.0\TiendaKeytlin.Server.staticwebassets.endpoints.json
-C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\bin\Debug\net8.0\spa.proxy.json
 C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\bin\Debug\net8.0\TiendaKeytlin.Server.exe
 C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\bin\Debug\net8.0\TiendaKeytlin.Server.deps.json
 C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\bin\Debug\net8.0\TiendaKeytlin.Server.runtimeconfig.json
@@ -1984,15 +1993,6 @@ C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytli
 C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
-C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\TiendaKeytlin.Server.csproj.AssemblyReference.cache
-C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\spa.proxy.json
-C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\TiendaKeytlin.Server.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\TiendaKeytlin.Server.AssemblyInfoInputs.cache
-C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\TiendaKeytlin.Server.AssemblyInfo.cs
-C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\TiendaKeytlin.Server.csproj.CoreCompileInputs.cache
-C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\TiendaKeytlin.Server.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\TiendaKeytlin.Server.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\TiendaKeytlin.Server.sourcelink.json
 C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\scopedcss\bundle\TiendaKeytlin.Server.styles.css
 C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\staticwebassets.development.json
@@ -2003,10 +2003,10 @@ C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytli
 C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.TiendaKeytlin.Server.props
 C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.TiendaKeytlin.Server.props
 C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\TiendaKe.60798D30.Up2Date
 C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\TiendaKeytlin.Server.dll
 C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\refint\TiendaKeytlin.Server.dll
 C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\TiendaKeytlin.Server.pdb
 C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\TiendaKeytlin.Server.genruntimeconfig.cache
 C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\ref\TiendaKeytlin.Server.dll
-C:\Users\guait\Desktop\Nuevo Proyecto\TiendaKeytlinAngular-.netcore\TiendaKeytlin.Server\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

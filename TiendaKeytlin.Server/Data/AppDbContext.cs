@@ -20,7 +20,8 @@ namespace TiendaKeytlin.Server.Data
             // Insertar datos iniciales para Estados
             modelBuilder.Entity<EstadoUsuario>().HasData(
                 new EstadoUsuario { Id = 1, Nombre = "Activo" },
-                new EstadoUsuario { Id = 2, Nombre = "Inactivo" }
+                new EstadoUsuario { Id = 2, Nombre = "Inactivo" },
+                new EstadoUsuario { Id = 3, Nombre = "Eliminado"}
             );
 
             // Insertar datos iniciales para Roles

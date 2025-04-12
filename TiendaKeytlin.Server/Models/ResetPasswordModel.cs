@@ -2,8 +2,8 @@
 {
     public class ResetPasswordModel
     {
-        public string Email { get; set; }
-        public string Token { get; set; }
-        public string NewPassword { get; set; }
+        public string Correo { get; set; } = string.Empty;
+        public string VerificationCode { get; set; } = string.Empty;
+        public string NewContrasena { get; set; } = string.Empty;
     }
 }

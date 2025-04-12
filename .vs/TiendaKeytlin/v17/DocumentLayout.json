@@ -3,40 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\guait\\Desktop\\Nuevo Proyecto\\TiendaKeytlinAngular-.netcore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|c:\\users\\guait\\desktop\\nuevo proyecto\\tiendakeytlinangular-.netcore\\tiendakeytlin.server\\dtos\\usuariocreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|solutionrelative:tiendakeytlin.server\\dtos\\usuariocreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|c:\\users\\guait\\desktop\\nuevo proyecto\\tiendakeytlinangular-.netcore\\tiendakeytlin.server\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|solutionrelative:tiendakeytlin.server\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|c:\\users\\guait\\desktop\\nuevo proyecto\\tiendakeytlinangular-.netcore\\tiendakeytlin.server\\controllers\\rolpermisoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|solutionrelative:tiendakeytlin.server\\controllers\\rolpermisoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|c:\\users\\guait\\desktop\\nuevo proyecto\\tiendakeytlinangular-.netcore\\tiendakeytlin.server\\controllers\\rolusuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|solutionrelative:tiendakeytlin.server\\controllers\\rolusuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|c:\\users\\guait\\desktop\\nuevo proyecto\\tiendakeytlinangular-.netcore\\tiendakeytlin.server\\controllers\\permisoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|solutionrelative:tiendakeytlin.server\\controllers\\permisoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|c:\\users\\guait\\desktop\\nuevo proyecto\\tiendakeytlinangular-.netcore\\tiendakeytlin.server\\models\\rolusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|solutionrelative:tiendakeytlin.server\\models\\rolusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|c:\\users\\guait\\desktop\\nuevo proyecto\\tiendakeytlinangular-.netcore\\tiendakeytlin.server\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|solutionrelative:tiendakeytlin.server\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|c:\\users\\guait\\desktop\\nuevo proyecto\\tiendakeytlinangular-.netcore\\tiendakeytlin.server\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|solutionrelative:tiendakeytlin.server\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|c:\\users\\guait\\desktop\\nuevo proyecto\\tiendakeytlinangular-.netcore\\tiendakeytlin.server\\models\\rolpermiso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|solutionrelative:tiendakeytlin.server\\models\\rolpermiso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|c:\\users\\guait\\desktop\\nuevo proyecto\\tiendakeytlinangular-.netcore\\tiendakeytlin.server\\models\\permiso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|solutionrelative:tiendakeytlin.server\\models\\permiso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|c:\\users\\guait\\desktop\\nuevo proyecto\\tiendakeytlinangular-.netcore\\tiendakeytlin.server\\services\\permissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|solutionrelative:tiendakeytlin.server\\services\\permissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3C486012-31BD-4F23-A1A9-2C3219A04040}|TiendaKeytlin.Server\\TiendaKeytlin.Server.csproj|c:\\users\\guait\\desktop\\nuevo proyecto\\tiendakeytlinangular-.netcore\\tiendakeytlin.server\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,136 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UsuarioCreateDto.cs",
-              "DocumentMoniker": "C:\\Users\\guait\\Desktop\\Nuevo Proyecto\\TiendaKeytlinAngular-.netcore\\TiendaKeytlin.Server\\DTOs\\UsuarioCreateDto.cs",
-              "RelativeDocumentMoniker": "TiendaKeytlin.Server\\DTOs\\UsuarioCreateDto.cs",
-              "ToolTip": "C:\\Users\\guait\\Desktop\\Nuevo Proyecto\\TiendaKeytlinAngular-.netcore\\TiendaKeytlin.Server\\DTOs\\UsuarioCreateDto.cs",
-              "RelativeToolTip": "TiendaKeytlin.Server\\DTOs\\UsuarioCreateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAQwA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T07:51:17.649Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RolUsuarioController.cs",
-              "DocumentMoniker": "C:\\Users\\guait\\Desktop\\Nuevo Proyecto\\TiendaKeytlinAngular-.netcore\\TiendaKeytlin.Server\\Controllers\\RolUsuarioController.cs",
-              "RelativeDocumentMoniker": "TiendaKeytlin.Server\\Controllers\\RolUsuarioController.cs",
-              "ToolTip": "C:\\Users\\guait\\Desktop\\Nuevo Proyecto\\TiendaKeytlinAngular-.netcore\\TiendaKeytlin.Server\\Controllers\\RolUsuarioController.cs",
-              "RelativeToolTip": "TiendaKeytlin.Server\\Controllers\\RolUsuarioController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T12:10:08.083Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\guait\\Desktop\\Nuevo Proyecto\\TiendaKeytlinAngular-.netcore\\TiendaKeytlin.Server\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "TiendaKeytlin.Server\\Data\\AppDbContext.cs",
               "ToolTip": "C:\\Users\\guait\\Desktop\\Nuevo Proyecto\\TiendaKeytlinAngular-.netcore\\TiendaKeytlin.Server\\Data\\AppDbContext.cs",
               "RelativeToolTip": "TiendaKeytlin.Server\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAswGkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwB0AAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T11:19:31.039Z",
+              "WhenOpened": "2025-04-12T05:12:17.994Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "RolPermiso.cs",
-              "DocumentMoniker": "C:\\Users\\guait\\Desktop\\Nuevo Proyecto\\TiendaKeytlinAngular-.netcore\\TiendaKeytlin.Server\\Models\\RolPermiso.cs",
-              "RelativeDocumentMoniker": "TiendaKeytlin.Server\\Models\\RolPermiso.cs",
-              "ToolTip": "C:\\Users\\guait\\Desktop\\Nuevo Proyecto\\TiendaKeytlinAngular-.netcore\\TiendaKeytlin.Server\\Models\\RolPermiso.cs",
-              "RelativeToolTip": "TiendaKeytlin.Server\\Models\\RolPermiso.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "UsuariosController.cs",
+              "DocumentMoniker": "C:\\Users\\guait\\Desktop\\Nuevo Proyecto\\TiendaKeytlinAngular-.netcore\\TiendaKeytlin.Server\\Controllers\\UsuariosController.cs",
+              "RelativeDocumentMoniker": "TiendaKeytlin.Server\\Controllers\\UsuariosController.cs",
+              "ToolTip": "C:\\Users\\guait\\Desktop\\Nuevo Proyecto\\TiendaKeytlinAngular-.netcore\\TiendaKeytlin.Server\\Controllers\\UsuariosController.cs",
+              "RelativeToolTip": "TiendaKeytlin.Server\\Controllers\\UsuariosController.cs",
+              "ViewState": "AgIAAP4AAAAAAAAAAAAqwAoBAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T11:27:18.791Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Permiso.cs",
-              "DocumentMoniker": "C:\\Users\\guait\\Desktop\\Nuevo Proyecto\\TiendaKeytlinAngular-.netcore\\TiendaKeytlin.Server\\Models\\Permiso.cs",
-              "RelativeDocumentMoniker": "TiendaKeytlin.Server\\Models\\Permiso.cs",
-              "ToolTip": "C:\\Users\\guait\\Desktop\\Nuevo Proyecto\\TiendaKeytlinAngular-.netcore\\TiendaKeytlin.Server\\Models\\Permiso.cs",
-              "RelativeToolTip": "TiendaKeytlin.Server\\Models\\Permiso.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T11:26:57.371Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RolUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\guait\\Desktop\\Nuevo Proyecto\\TiendaKeytlinAngular-.netcore\\TiendaKeytlin.Server\\Models\\RolUsuario.cs",
-              "RelativeDocumentMoniker": "TiendaKeytlin.Server\\Models\\RolUsuario.cs",
-              "ToolTip": "C:\\Users\\guait\\Desktop\\Nuevo Proyecto\\TiendaKeytlinAngular-.netcore\\TiendaKeytlin.Server\\Models\\RolUsuario.cs",
-              "RelativeToolTip": "TiendaKeytlin.Server\\Models\\RolUsuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T11:26:02.809Z",
+              "WhenOpened": "2025-04-12T02:58:09.937Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "RolPermisosController.cs",
-              "DocumentMoniker": "C:\\Users\\guait\\Desktop\\Nuevo Proyecto\\TiendaKeytlinAngular-.netcore\\TiendaKeytlin.Server\\Controllers\\RolPermisosController.cs",
-              "RelativeDocumentMoniker": "TiendaKeytlin.Server\\Controllers\\RolPermisosController.cs",
-              "ToolTip": "C:\\Users\\guait\\Desktop\\Nuevo Proyecto\\TiendaKeytlinAngular-.netcore\\TiendaKeytlin.Server\\Controllers\\RolPermisosController.cs",
-              "RelativeToolTip": "TiendaKeytlin.Server\\Controllers\\RolPermisosController.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAswEoAAAAJAAAAAAAAAA==",
+              "Title": "PermissionService.cs",
+              "DocumentMoniker": "C:\\Users\\guait\\Desktop\\Nuevo Proyecto\\TiendaKeytlinAngular-.netcore\\TiendaKeytlin.Server\\Services\\PermissionService.cs",
+              "RelativeDocumentMoniker": "TiendaKeytlin.Server\\Services\\PermissionService.cs",
+              "ToolTip": "C:\\Users\\guait\\Desktop\\Nuevo Proyecto\\TiendaKeytlinAngular-.netcore\\TiendaKeytlin.Server\\Services\\PermissionService.cs",
+              "RelativeToolTip": "TiendaKeytlin.Server\\Services\\PermissionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBUAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T12:11:17.743Z",
+              "WhenOpened": "2025-04-12T02:43:42.742Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\guait\\Desktop\\Nuevo Proyecto\\TiendaKeytlinAngular-.netcore\\TiendaKeytlin.Server\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "TiendaKeytlin.Server\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\guait\\Desktop\\Nuevo Proyecto\\TiendaKeytlinAngular-.netcore\\TiendaKeytlin.Server\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "TiendaKeytlin.Server\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAgwCUAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T06:27:45.562Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PermisosController.cs",
-              "DocumentMoniker": "C:\\Users\\guait\\Desktop\\Nuevo Proyecto\\TiendaKeytlinAngular-.netcore\\TiendaKeytlin.Server\\Controllers\\PermisosController.cs",
-              "RelativeDocumentMoniker": "TiendaKeytlin.Server\\Controllers\\PermisosController.cs",
-              "ToolTip": "C:\\Users\\guait\\Desktop\\Nuevo Proyecto\\TiendaKeytlinAngular-.netcore\\TiendaKeytlin.Server\\Controllers\\PermisosController.cs",
-              "RelativeToolTip": "TiendaKeytlin.Server\\Controllers\\PermisosController.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAYwGoAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T12:10:54.246Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\guait\\Desktop\\Nuevo Proyecto\\TiendaKeytlinAngular-.netcore\\TiendaKeytlin.Server\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "TiendaKeytlin.Server\\Services\\AuthService.cs",
               "ToolTip": "C:\\Users\\guait\\Desktop\\Nuevo Proyecto\\TiendaKeytlinAngular-.netcore\\TiendaKeytlin.Server\\Services\\AuthService.cs",
               "RelativeToolTip": "TiendaKeytlin.Server\\Services\\AuthService.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAA7wDUAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAwwHAAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T06:26:43.752Z",
+              "WhenOpened": "2025-04-11T02:23:08.404Z",
               "EditorCaption": ""
             }
           ]

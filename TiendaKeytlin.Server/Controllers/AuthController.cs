@@ -7,6 +7,9 @@ using TiendaKeytlin.Server.Data;
 using TiendaKeytlin.Server.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using TiendaKeytlin.Server.DTOs;
+using TiendaKeytlin.Server.Services;
+
 
 namespace TiendaKeytlin.Server.Controllers
 {
@@ -17,12 +20,15 @@ namespace TiendaKeytlin.Server.Controllers
         private readonly AppDbContext _context;
         private readonly IConfiguration _configuration;
         private readonly ILogger<AuthController> _logger;
+        private readonly AuthService _authService;
 
-        public AuthController(AppDbContext context, IConfiguration configuration, ILogger<AuthController> logger)
+
+        public AuthController(AppDbContext context, IConfiguration configuration, ILogger<AuthController> logger, AuthService authService)
         {
             _context = context;
             _configuration = configuration;
             _logger = logger;
+            _authService = authService; 
         }
 
         [HttpPost("login")]
@@ -66,13 +72,24 @@ namespace TiendaKeytlin.Server.Controllers
                     _logger.LogError("Rol no encontrado para el usuario: {Email}", login.Email);
                     return StatusCode(500, "Error en la configuración del usuario");
                 }
+                //Obtener los permisos del rol
+                var permisos = await _context.RolPermisos
+                .Where(rp => rp.RolId == usuario.RolId)
+                .Include(rp => rp.Permiso)
+                .Select(rp => rp.Permiso.Nombre)
+                .ToListAsync();
 
-                var claims = new[]
+                var claims = new List<Claim>
                 {
                     new Claim(ClaimTypes.NameIdentifier, usuario.Id.ToString()),
                     new Claim(ClaimTypes.Name, usuario.Nombre),
                     new Claim(ClaimTypes.Role, rol.Nombre), // Usar el rol obtenido directamente
                     new Claim("Email", usuario.Correo)
+                };
+
+                foreach (var permiso in permisos)
+                {
+                    claims.Add(new Claim("Permissio", permiso));
                 };
 
                 var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:SecretKey"]));
@@ -98,7 +115,8 @@ namespace TiendaKeytlin.Server.Controllers
                     userName = usuario.Nombre,
                     userApellido = usuario.Apellido,
                     userEmail = usuario.Correo,
-                    userRole = rol.Nombre
+                    userRole = rol.Nombre,
+                    userPermissions = permisos
                 });
             }
             catch (Exception ex)
@@ -106,7 +124,48 @@ namespace TiendaKeytlin.Server.Controllers
                 _logger.LogError(ex, "Error durante el inicio de sesión para {Email}", login.Email);
                 return StatusCode(500, "Error interno del servidor");
             }
+
         }
+        [HttpPost("recuperar-contrasena")]
+        public async Task<IActionResult> RecuperarContrasena([FromBody] string correo)
+        {
+            if (string.IsNullOrEmpty(correo))
+            {
+                return BadRequest(new { mensaje = "El correo es obligatorio." });
+            }
+
+            var resultado = await _authService.EnviarCodigoRecuperacionAsync(correo);
+            if (!resultado)
+            {
+                return NotFound(new { mensaje = "Correo no encontrado o error al enviar el código" });
+            }
+
+            return Ok(new { mensaje = "Código de recuperación enviado exitosamente" });
+        }
+
+        [HttpPost("verificar-codigo-recuperacion")]
+        public async Task<IActionResult> VerificarCodigoRecuperacion([FromBody] VerificacionCodigoDto verificacionDTO)
+        {
+            var resultado = await _authService.VerificarCodigoRecuperacionAsync(verificacionDTO.Correo, verificacionDTO.Codigo);
+            if (!resultado)
+            {
+                return Unauthorized(new { message = "Código incorrecto o expirado" });
+            }
+
+            return Ok(new { message = "Código verificado correctamente" });
+        }
+
+
+        [HttpPost("reset-password")]
+        public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordModel model)
+        {
+            var result = await _authService.ResetPasswordAsync(model);
+            if (!result)
+                return BadRequest(new { message = "Código inválido o correo incorrecto." });
+
+            return Ok(new { message = "Contraseña actualizada correctamente." });
+        }
+
     }
 
     public class LoginModel

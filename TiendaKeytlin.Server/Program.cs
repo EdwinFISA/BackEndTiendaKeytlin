@@ -9,7 +9,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-
 // Configura CORS
 builder.Services.AddCors(options =>
 {
@@ -45,6 +44,11 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.Configure<EmailConfiguration>(builder.Configuration.GetSection("EmailConfiguration"));
 builder.Services.AddTransient<EmailService>();
 
+// Agregar AuthService al contenedor
+builder.Services.AddScoped<AuthService>();
+
+//Agregar PermisosServise al contenedor
+builder.Services.AddScoped<PermissionService>();
 
 builder.Services.AddControllers();
 
@@ -70,16 +74,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-
+app.UseHttpsRedirection();
+app.UseCors("AllowAllOrigins"); // Habilita CORS
 
 app.UseAuthentication(); // Habilita la autenticación JWT
+
 app.UseAuthorization(); // Habilita la autorización basada en JWT
-
-app.UseHttpsRedirection();
-
-
-app.UseCors("AllowAllOrigins"); // Habilita CORS
 
 app.MapControllers();
 app.MapFallbackToFile("/index.html");
