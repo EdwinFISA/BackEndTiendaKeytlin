@@ -15,11 +15,13 @@ namespace TiendaKeytlin.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+
     public class UsuarioController : ControllerBase
     {
         private readonly AppDbContext _context;
         private readonly EmailService _emailService;
         private readonly ILogger<UsuarioController> _logger;
+
 
         public UsuarioController(
             AppDbContext context,
@@ -50,6 +52,9 @@ namespace TiendaKeytlin.Server.Controllers
                     usuario.Nombre,
                     usuario.Apellido,
                     usuario.Correo,
+                    usuario.Imagen,
+                    //usuario.FechaNacimiento,
+                    //edad = CalcularEdad(usuario.FechaNacimiento),
                     usuario.Telefono,
                     usuario.FechaCreacion,
                     Estado = usuario.Estado.Nombre,
@@ -64,6 +69,17 @@ namespace TiendaKeytlin.Server.Controllers
                 return StatusCode(500, "Error interno al obtener la lista de usuarios");
             }
         }
+
+        // Método para calcular la edad basado en la fecha de nacimiento
+        //private int CalcularEdad(DateTime FechaNacimiento)
+        //{
+        //    var hoy = DateTime.Today;
+        //    var edad = hoy.Year - FechaNacimiento.Year;
+
+        //    if (FechaNacimiento.Date > hoy.AddYears(-edad)) edad--;
+
+        //    return edad;
+        //}
 
         // GET: api/usuario/{id}
         [HttpGet("{id}")]
@@ -131,6 +147,9 @@ namespace TiendaKeytlin.Server.Controllers
                     Nombre = usuarioDto.Nombre,
                     Apellido = usuarioDto.Apellido,
                     Correo = usuarioDto.Correo,
+                    //FechaNacimiento= usuarioDto.FechaNacimiento,
+                    //edad = CalcularEdad(usuarioDto.FechaNacimiento),
+                    Imagen = usuarioDto.Imagen,
                     Contrasena = usuarioDto.Contrasena,
                     Telefono = usuarioDto.Telefono,
                     EstadoId = usuarioDto.EstadoId,
@@ -168,6 +187,9 @@ namespace TiendaKeytlin.Server.Controllers
                     usuario.Nombre,
                     usuario.Apellido,
                     usuario.Correo,
+                    //usuario.FechaNacimiento,
+                    //usuario.edad,
+                    usuario.Imagen,
                     usuario.Telefono,
                     usuario.FechaCreacion,
                     usuario.Estado,
@@ -182,6 +204,7 @@ namespace TiendaKeytlin.Server.Controllers
                 return StatusCode(500, "Error interno del servidor al crear el usuario");
             }
         }
+
 
         [HttpPut("{id}")]
         public async Task<IActionResult> PutUsuario(int id, [FromBody] UsuarioUpdateDto usuarioDto)
@@ -204,6 +227,9 @@ namespace TiendaKeytlin.Server.Controllers
                 usuarioExistente.Nombre = usuarioDto.Nombre;
                 usuarioExistente.Apellido = usuarioDto.Apellido;
                 usuarioExistente.Correo = usuarioDto.Correo;
+                usuarioExistente.Imagen = usuarioDto.Imagen;
+                //usuarioExistente.FechaNacimiento = usuarioDto.FechaNacimiento;
+                //usuarioExistente.edad = CalcularEdad(usuarioDto.FechaNacimiento); // <-- Recalcular edad
                 usuarioExistente.Telefono = usuarioDto.Telefono;
                 usuarioExistente.EstadoId = usuarioDto.EstadoId;
                 usuarioExistente.RolId = usuarioDto.RolId;

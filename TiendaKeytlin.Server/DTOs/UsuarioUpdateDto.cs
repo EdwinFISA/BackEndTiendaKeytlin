@@ -18,6 +18,9 @@ public class UsuarioUpdateDto
 
     [Phone(ErrorMessage = "El formato del teléfono no es válido")]
     public string Telefono { get; set; }
+    //public DateTime FechaNacimiento { get; set; }
+    //public int edad { get; set; }
+    public string Imagen { get; set; }
 
     [Required(ErrorMessage = "El estado es obligatorio")]
     [Range(1, int.MaxValue, ErrorMessage = "Seleccione un estado válido")]

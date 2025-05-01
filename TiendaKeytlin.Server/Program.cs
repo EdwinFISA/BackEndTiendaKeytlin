@@ -68,6 +68,7 @@ var app = builder.Build();
 app.UseDefaultFiles();
 app.UseStaticFiles();
 
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -75,12 +76,16 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 app.UseHttpsRedirection();
-app.UseCors("AllowAllOrigins"); // Habilita CORS
 
 app.UseAuthentication(); // Habilita la autenticación JWT
 
 app.UseAuthorization(); // Habilita la autorización basada en JWT
-
+app.UseCors(builder => builder
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+    .WithExposedHeaders("Content-Disposition")
+);
 app.MapControllers();
 app.MapFallbackToFile("/index.html");
 
