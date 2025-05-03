@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using TiendaKeytlin.Server.Data;
@@ -11,9 +12,11 @@ using TiendaKeytlin.Server.Data;
 namespace TiendaKeytlin.Server.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250503022334_Nuevos_Permisos")]
+    partial class Nuevos_Permisos
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -49,32 +52,6 @@ namespace TiendaKeytlin.Server.Migrations
                             Id = 2,
                             Nombre = "Vendedor"
                         });
-                });
-
-            modelBuilder.Entity("TiendaKeytlin.Server.Models.Categoria", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("CategoriaNombre")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Descripcion")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<int>("EstadoUsuarioId")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("EstadoUsuarioId");
-
-                    b.ToTable("Categorias");
                 });
 
             modelBuilder.Entity("TiendaKeytlin.Server.Models.Empresa", b =>
@@ -621,17 +598,6 @@ namespace TiendaKeytlin.Server.Migrations
                     b.HasIndex("RolId");
 
                     b.ToTable("Usuarios");
-                });
-
-            modelBuilder.Entity("TiendaKeytlin.Server.Models.Categoria", b =>
-                {
-                    b.HasOne("TiendaKeytlin.Server.Models.EstadoUsuario", "EstadoUsuario")
-                        .WithMany()
-                        .HasForeignKey("EstadoUsuarioId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("EstadoUsuario");
                 });
 
             modelBuilder.Entity("TiendaKeytlin.Server.Models.Permiso", b =>

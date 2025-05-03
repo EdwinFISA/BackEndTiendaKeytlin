@@ -14,6 +14,7 @@ namespace TiendaKeytlin.Server.Data
         public DbSet<RolPermiso> RolPermisos { get; set; }     
         public DbSet<Empresa> Empresa { get; set; }
         public DbSet<Proveedor> Proveedores { get; set; }
+        public DbSet<Categoria> Categorias { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -32,47 +33,109 @@ namespace TiendaKeytlin.Server.Data
 
             // Insertar datos iniciales para Permisos
             modelBuilder.Entity<Permiso>().HasData(
-                    // Dashboard
-                    new Permiso { Id = 1, Nombre = "Ver Dashboard" },
-                    new Permiso { Id = 2, Nombre = "Crear Dashboard" },
-                    new Permiso { Id = 3, Nombre = "Editar Dashboard" },
-                    new Permiso { Id = 4, Nombre = "Eliminar Dashboard" },
 
-                    // Caja
-                    new Permiso { Id = 5, Nombre = "Ver Caja" },
-                    new Permiso { Id = 6, Nombre = "Crear Caja" },
-                    new Permiso { Id = 7, Nombre = "Editar Caja" },
-                    new Permiso { Id = 8, Nombre = "Eliminar Caja" },
+                // Dashboard
+                new Permiso { Id = 1, Nombre = "Ver Dashboard" },
+                new Permiso { Id = 2, Nombre = "Crear Dashboard" },
+                new Permiso { Id = 3, Nombre = "Editar Dashboard" },
+                new Permiso { Id = 4, Nombre = "Eliminar Dashboard" },
 
-                    // Artículos
-                    new Permiso { Id = 9, Nombre = "Ver Artículos" },
-                    new Permiso { Id = 10, Nombre = "Crear Artículos" },
-                    new Permiso { Id = 11, Nombre = "Editar Artículos" },
-                    new Permiso { Id = 12, Nombre = "Eliminar Artículos" },
+                // Apertura Caja
+                new Permiso { Id = 5, Nombre = "Ver Apertura Caja" },
+                new Permiso { Id = 6, Nombre = "Crear Apertura Caja" },
+                new Permiso { Id = 7, Nombre = "Editar Apertura Caja" },
+                new Permiso { Id = 8, Nombre = "Eliminar Apertura Caja" },
 
-                    // Inventario
-                    new Permiso { Id = 13, Nombre = "Ver Inventario" },
-                    new Permiso { Id = 14, Nombre = "Crear Inventario" },
-                    new Permiso { Id = 15, Nombre = "Editar Inventario" },
-                    new Permiso { Id = 16, Nombre = "Eliminar Inventario" },
+                // Cierre Caja
+                new Permiso { Id = 9, Nombre = "Ver Cierre Caja" },
+                new Permiso { Id = 10, Nombre = "Crear Cierre Caja" },
+                new Permiso { Id = 11, Nombre = "Editar Cierre Caja" },
+                new Permiso { Id = 12, Nombre = "Eliminar Cierre Caja" },
 
-                    // Ventas
-                    new Permiso { Id = 17, Nombre = "Ver Ventas" },
-                    new Permiso { Id = 18, Nombre = "Crear Ventas" },
-                    new Permiso { Id = 19, Nombre = "Editar Ventas" },
-                    new Permiso { Id = 20, Nombre = "Eliminar Ventas" },
+                // Productos
+                new Permiso { Id = 13, Nombre = "Ver Productos" },
+                new Permiso { Id = 14, Nombre = "Crear Productos" },
+                new Permiso { Id = 15, Nombre = "Editar Productos" },
+                new Permiso { Id = 16, Nombre = "Eliminar Productos" },
 
-                    // Administración
-                    new Permiso { Id = 21, Nombre = "Ver Administración" },
-                    new Permiso { Id = 22, Nombre = "Crear Administración" },
-                    new Permiso { Id = 23, Nombre = "Editar Administración" },
-                    new Permiso { Id = 24, Nombre = "Eliminar Administración" },
+                // Categorías
+                new Permiso { Id = 17, Nombre = "Ver Categorías" },
+                new Permiso { Id = 18, Nombre = "Crear Categorías" },
+                new Permiso { Id = 19, Nombre = "Editar Categorías" },
+                new Permiso { Id = 20, Nombre = "Eliminar Categorías" },
 
-                    // Reportes
-                    new Permiso { Id = 25, Nombre = "Ver Reportes" },
-                    new Permiso { Id = 26, Nombre = "Crear Reportes" },
-                    new Permiso { Id = 27, Nombre = "Editar Reportes" },
-                    new Permiso { Id = 28, Nombre = "Eliminar Reportes" }
+                // Proveedores
+                new Permiso { Id = 21, Nombre = "Ver Proveedores" },
+                new Permiso { Id = 22, Nombre = "Crear Proveedores" },
+                new Permiso { Id = 23, Nombre = "Editar Proveedores" },
+                new Permiso { Id = 24, Nombre = "Eliminar Proveedores" },
+
+                // Inventario / Stock
+                new Permiso { Id = 25, Nombre = "Ver Inventario" },
+                new Permiso { Id = 26, Nombre = "Crear Inventario" },
+                new Permiso { Id = 27, Nombre = "Editar Inventario" },
+                new Permiso { Id = 28, Nombre = "Eliminar Inventario" },
+
+                // Pedidos
+                new Permiso { Id = 29, Nombre = "Ver Pedidos" },
+                new Permiso { Id = 30, Nombre = "Crear Pedidos" },
+                new Permiso { Id = 31, Nombre = "Editar Pedidos" },
+                new Permiso { Id = 32, Nombre = "Eliminar Pedidos" },
+
+                // Ventas
+                new Permiso { Id = 33, Nombre = "Ver Ventas" },
+                new Permiso { Id = 34, Nombre = "Crear Ventas" },
+                new Permiso { Id = 35, Nombre = "Editar Ventas" },
+                new Permiso { Id = 36, Nombre = "Eliminar Ventas" },
+
+                // Historial
+                new Permiso { Id = 37, Nombre = "Ver Historial" },
+                new Permiso { Id = 38, Nombre = "Crear Historial" },
+                new Permiso { Id = 39, Nombre = "Editar Historial" },
+                new Permiso { Id = 40, Nombre = "Eliminar Historial" },
+
+                // Usuarios
+                new Permiso { Id = 41, Nombre = "Ver Usuarios" },
+                new Permiso { Id = 42, Nombre = "Crear Usuarios" },
+                new Permiso { Id = 43, Nombre = "Editar Usuarios" },
+                new Permiso { Id = 44, Nombre = "Eliminar Usuarios" },
+
+                // Contacto
+                new Permiso { Id = 45, Nombre = "Ver Contacto" },
+                new Permiso { Id = 46, Nombre = "Crear Contacto" },
+                new Permiso { Id = 47, Nombre = "Editar Contacto" },
+                new Permiso { Id = 48, Nombre = "Eliminar Contacto" },
+
+                // Roles
+                new Permiso { Id = 49, Nombre = "Ver Roles" },
+                new Permiso { Id = 50, Nombre = "Crear Roles" },
+                new Permiso { Id = 51, Nombre = "Editar Roles" },
+                new Permiso { Id = 52, Nombre = "Eliminar Roles" },
+
+                // Reportes Usuarios
+                new Permiso { Id = 53, Nombre = "Ver Reportes de Usuarios" },
+                new Permiso { Id = 54, Nombre = "Crear Reportes de Usuarios" },
+                new Permiso { Id = 55, Nombre = "Editar Reportes de Usuarios" },
+                new Permiso { Id = 56, Nombre = "Eliminar Reportes de Usuarios" },
+
+                // Reportes Ventas
+                new Permiso { Id = 57, Nombre = "Ver Reportes de Ventas" },
+                new Permiso { Id = 58, Nombre = "Crear Reportes de Ventas" },
+                new Permiso { Id = 59, Nombre = "Editar Reportes de Ventas" },
+                new Permiso { Id = 60, Nombre = "Eliminar Reportes de Ventas" },
+
+                // Reportes Pedidos
+                new Permiso { Id = 61, Nombre = "Ver Reportes de Pedidos" },
+                new Permiso { Id = 62, Nombre = "Crear Reportes de Pedidos" },
+                new Permiso { Id = 63, Nombre = "Editar Reportes de Pedidos" },
+                new Permiso { Id = 64, Nombre = "Eliminar Reportes de Pedidos" },
+
+                // Reportes Inventario
+                new Permiso { Id = 65, Nombre = "Ver Reportes de Inventario" },
+                new Permiso { Id = 66, Nombre = "Crear Reportes de Inventario" },
+                new Permiso { Id = 67, Nombre = "Editar Reportes de Inventario" },
+                new Permiso { Id = 68, Nombre = "Eliminar Reportes de Inventario" }
+
             );
 
             // Configurar las relaciones
