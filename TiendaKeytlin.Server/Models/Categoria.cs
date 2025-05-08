@@ -19,3 +19,4 @@ namespace TiendaKeytlin.Server.Models
         public virtual EstadoUsuario EstadoUsuario { get; set; }
     }
 }
+                     

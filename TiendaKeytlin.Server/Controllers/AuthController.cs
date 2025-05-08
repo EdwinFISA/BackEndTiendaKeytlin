@@ -83,8 +83,8 @@ namespace TiendaKeytlin.Server.Controllers
                 {
                     new Claim(ClaimTypes.NameIdentifier, usuario.Id.ToString()),
                     new Claim(ClaimTypes.Name, usuario.Nombre),
-                    new Claim(ClaimTypes.Role, rol.Nombre), // Usar el rol obtenido directamente
-                    new Claim("Email", usuario.Correo)
+                    new Claim(ClaimTypes.Role, rol.Nombre), 
+                    new Claim("Email", usuario.Correo),
                 };
 
                 foreach (var permiso in permisos)
@@ -116,7 +116,8 @@ namespace TiendaKeytlin.Server.Controllers
                     userApellido = usuario.Apellido,
                     userEmail = usuario.Correo,
                     userRole = rol.Nombre,
-                    userPermissions = permisos
+                    userPermissions = permisos,
+                    userImage = usuario.Imagen
                 });
             }
             catch (Exception ex)

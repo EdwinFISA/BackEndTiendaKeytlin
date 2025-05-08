@@ -31,6 +31,9 @@ namespace TiendaKeytlin.Server.Data
                 new RolUsuario { Id = 2, Nombre = "Vendedor" }
             );
 
+            modelBuilder.Entity<RolPermiso>()
+            .HasKey(rp => new { rp.RolId, rp.PermisoId });
+
             // Insertar datos iniciales para Permisos
             modelBuilder.Entity<Permiso>().HasData(
 
@@ -137,6 +140,79 @@ namespace TiendaKeytlin.Server.Data
                 new Permiso { Id = 68, Nombre = "Eliminar Reportes de Inventario" }
 
             );
+
+            // Asignar todos los permisos al rol Admin
+            modelBuilder.Entity<RolPermiso>().HasData(
+                new RolPermiso { Id = 1, RolId = 1, PermisoId = 1 },
+                new RolPermiso { Id = 2, RolId = 1, PermisoId = 2 },
+                new RolPermiso { Id = 3, RolId = 1, PermisoId = 3 },
+                new RolPermiso { Id = 4, RolId = 1, PermisoId = 4 },
+                new RolPermiso { Id = 5, RolId = 1, PermisoId = 5 },
+                new RolPermiso { Id = 6, RolId = 1, PermisoId = 6 },
+                new RolPermiso { Id = 7, RolId = 1, PermisoId = 7 },
+                new RolPermiso { Id = 8, RolId = 1, PermisoId = 8 },
+                new RolPermiso { Id = 9, RolId = 1, PermisoId = 9 },
+                new RolPermiso { Id = 10, RolId = 1, PermisoId = 10 },
+                new RolPermiso { Id = 11, RolId = 1, PermisoId = 11 },
+                new RolPermiso { Id = 12, RolId = 1, PermisoId = 12 },
+                new RolPermiso { Id = 13, RolId = 1, PermisoId = 13 },
+                new RolPermiso { Id = 14, RolId = 1, PermisoId = 14 },
+                new RolPermiso { Id = 15, RolId = 1, PermisoId = 15 },
+                new RolPermiso { Id = 16, RolId = 1, PermisoId = 16 },
+                new RolPermiso { Id = 17, RolId = 1, PermisoId = 17 },
+                new RolPermiso { Id = 18, RolId = 1, PermisoId = 18 },
+                new RolPermiso { Id = 19, RolId = 1, PermisoId = 19 },
+                new RolPermiso { Id = 20, RolId = 1, PermisoId = 20 },
+                new RolPermiso { Id = 21, RolId = 1, PermisoId = 21 },
+                new RolPermiso { Id = 22, RolId = 1, PermisoId = 22 },
+                new RolPermiso { Id = 23, RolId = 1, PermisoId = 23 },
+                new RolPermiso { Id = 24, RolId = 1, PermisoId = 24 },
+                new RolPermiso { Id = 25, RolId = 1, PermisoId = 25 },
+                new RolPermiso { Id = 26, RolId = 1, PermisoId = 26 },
+                new RolPermiso { Id = 27, RolId = 1, PermisoId = 27 },
+                new RolPermiso { Id = 28, RolId = 1, PermisoId = 28 },
+                new RolPermiso { Id = 29, RolId = 1, PermisoId = 29 },
+                new RolPermiso { Id = 30, RolId = 1, PermisoId = 30 },
+                new RolPermiso { Id = 31, RolId = 1, PermisoId = 31 },
+                new RolPermiso { Id = 32, RolId = 1, PermisoId = 32 },
+                new RolPermiso { Id = 33, RolId = 1, PermisoId = 33 },
+                new RolPermiso { Id = 34, RolId = 1, PermisoId = 34 },
+                new RolPermiso { Id = 35, RolId = 1, PermisoId = 35 },
+                new RolPermiso { Id = 36, RolId = 1, PermisoId = 36 },
+                new RolPermiso { Id = 37, RolId = 1, PermisoId = 37 },
+                new RolPermiso { Id = 38, RolId = 1, PermisoId = 38 },
+                new RolPermiso { Id = 39, RolId = 1, PermisoId = 39 },
+                new RolPermiso { Id = 40, RolId = 1, PermisoId = 40 },
+                new RolPermiso { Id = 41, RolId = 1, PermisoId = 41 },
+                new RolPermiso { Id = 42, RolId = 1, PermisoId = 42 },
+                new RolPermiso { Id = 43, RolId = 1, PermisoId = 43 },
+                new RolPermiso { Id = 44, RolId = 1, PermisoId = 44 },
+                new RolPermiso { Id = 45, RolId = 1, PermisoId = 45 },
+                new RolPermiso { Id = 46, RolId = 1, PermisoId = 46 },
+                new RolPermiso { Id = 47, RolId = 1, PermisoId = 47 },
+                new RolPermiso { Id = 48, RolId = 1, PermisoId = 48 },
+                new RolPermiso { Id = 49, RolId = 1, PermisoId = 49 },
+                new RolPermiso { Id = 50, RolId = 1, PermisoId = 50 },
+                new RolPermiso { Id = 51, RolId = 1, PermisoId = 51 },
+                new RolPermiso { Id = 52, RolId = 1, PermisoId = 52 },
+                new RolPermiso { Id = 53, RolId = 1, PermisoId = 53 },
+                new RolPermiso { Id = 54, RolId = 1, PermisoId = 54 },
+                new RolPermiso { Id = 55, RolId = 1, PermisoId = 55 },
+                new RolPermiso { Id = 56, RolId = 1, PermisoId = 56 },
+                new RolPermiso { Id = 57, RolId = 1, PermisoId = 57 },
+                new RolPermiso { Id = 58, RolId = 1, PermisoId = 58 },
+                new RolPermiso { Id = 59, RolId = 1, PermisoId = 59 },
+                new RolPermiso { Id = 60, RolId = 1, PermisoId = 60 },
+                new RolPermiso { Id = 61, RolId = 1, PermisoId = 61 },
+                new RolPermiso { Id = 62, RolId = 1, PermisoId = 62 },
+                new RolPermiso { Id = 63, RolId = 1, PermisoId = 63 },
+                new RolPermiso { Id = 64, RolId = 1, PermisoId = 64 },
+                new RolPermiso { Id = 65, RolId = 1, PermisoId = 65 },
+                new RolPermiso { Id = 66, RolId = 1, PermisoId = 66 },
+                new RolPermiso { Id = 67, RolId = 1, PermisoId = 67 },
+                new RolPermiso { Id = 68, RolId = 1, PermisoId = 68 }
+            );
+
 
             // Configurar las relaciones
             modelBuilder.Entity<Usuario>()
