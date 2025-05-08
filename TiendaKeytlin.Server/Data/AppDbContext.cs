@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using TiendaKeytlin.Server.Migrations;
 using TiendaKeytlin.Server.Models;
 
 namespace TiendaKeytlin.Server.Data
@@ -15,14 +16,14 @@ namespace TiendaKeytlin.Server.Data
         public DbSet<Empresa> Empresa { get; set; }
         public DbSet<Proveedor> Proveedores { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
-
+        public DbSet<Productos> Productos { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Insertar datos iniciales para Estados
             modelBuilder.Entity<EstadoUsuario>().HasData(
                 new EstadoUsuario { Id = 1, Nombre = "Activo" },
                 new EstadoUsuario { Id = 2, Nombre = "Inactivo" },
-                new EstadoUsuario { Id = 3, Nombre = "Eliminado"}
+                new EstadoUsuario { Id = 3, Nombre = "Eliminado" }
             );
 
             // Insertar datos iniciales para Roles
@@ -240,6 +241,24 @@ namespace TiendaKeytlin.Server.Data
                 .HasOne(rp => rp.Permiso)  // Relación con Permiso
                 .WithMany()  // Permiso no tiene una colección de RolPermiso, ya que se maneja a través de RolPermiso
                 .HasForeignKey(rp => rp.PermisoId);  // Clave foránea en RolPermiso para Permiso
+
+            //Relaciones Productos
+
+            // Producto - Categoria (muchos-a-uno)
+            modelBuilder.Entity<Productos>()
+                .HasOne(p => p.Categoria)
+                .WithMany(c => c.Productos)
+                .HasForeignKey(p => p.CategoriaId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // Producto - Proveedor (muchos-a-uno)
+            modelBuilder.Entity<Productos>()
+                .HasOne(p => p.Proveedor)
+                .WithMany(pr => pr.Productos)
+                .HasForeignKey(p => p.ProveedorId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+
         }
     }
 }
