@@ -258,7 +258,7 @@ namespace TiendaKeytlin.Server.Data
                 .HasForeignKey(p => p.ProveedorId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-
+            // Producto - Estado (muchos-a-uno)
         }
     }
 }

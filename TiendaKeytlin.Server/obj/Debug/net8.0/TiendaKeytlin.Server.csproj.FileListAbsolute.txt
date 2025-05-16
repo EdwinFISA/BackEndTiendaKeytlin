@@ -2167,7 +2167,6 @@ C:\Users\karin\Documents\Proyecto IS\BackEndTiendaKeytlin\TiendaKeytlin.Server\o
 C:\Users\karin\Documents\Proyecto IS\BackEndTiendaKeytlin\TiendaKeytlin.Server\obj\Debug\net8.0\TiendaKeytlin.Server.pdb
 C:\Users\karin\Documents\Proyecto IS\BackEndTiendaKeytlin\TiendaKeytlin.Server\obj\Debug\net8.0\TiendaKeytlin.Server.genruntimeconfig.cache
 C:\Users\karin\Documents\Proyecto IS\BackEndTiendaKeytlin\TiendaKeytlin.Server\obj\Debug\net8.0\ref\TiendaKeytlin.Server.dll
-C:\Users\karin\Documents\Proyecto IS\BackEndTiendaKeytlin\TiendaKeytlin.Server\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\guait\Desktop\Tienda Keytlin\BackEndTiendaKeytlin\TiendaKeytlin.Server\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\guait\Desktop\Tienda Keytlin\BackEndTiendaKeytlin\TiendaKeytlin.Server\bin\Debug\net8.0\appsettings.json
 C:\Users\guait\Desktop\Tienda Keytlin\BackEndTiendaKeytlin\TiendaKeytlin.Server\bin\Debug\net8.0\spa.proxy.json
@@ -2326,3 +2325,4 @@ C:\Users\guait\Desktop\Tienda Keytlin\BackEndTiendaKeytlin\TiendaKeytlin.Server\
 C:\Users\guait\Desktop\Tienda Keytlin\BackEndTiendaKeytlin\TiendaKeytlin.Server\obj\Debug\net8.0\TiendaKeytlin.Server.genruntimeconfig.cache
 C:\Users\guait\Desktop\Tienda Keytlin\BackEndTiendaKeytlin\TiendaKeytlin.Server\obj\Debug\net8.0\ref\TiendaKeytlin.Server.dll
 C:\Users\guait\Desktop\Tienda Keytlin\BackEndTiendaKeytlin\TiendaKeytlin.Server\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\karin\Documents\Proyecto IS\BackEndTiendaKeytlin\TiendaKeytlin.Server\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

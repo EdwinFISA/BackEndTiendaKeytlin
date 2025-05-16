@@ -4,17 +4,20 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 using TiendaKeytlin.Server.Models;
 
-public class Productos
+namespace TiendaKeytlin.Server.DTOs
 {
-    public int Id { get; set; }
-
+    
+public class ProductoCreateDto
+{
     [Required(ErrorMessage = "El nombre del producto es obligatorio")]
+
     public string Nombre { get; set; }
 
     [Required(ErrorMessage = "El código del producto es obligatorio")]
     public string CodigoProducto { get; set; }
 
-    public string MarcaProducto { get; set; }
+
+    public string? MarcaProducto { get; set; }
 
     [Required(ErrorMessage = "El precio de adquisición es obligatorio")]
     [Range(0, 999999, ErrorMessage = "El precio de adquisición debe estar entre 0 y 999999")]
@@ -23,11 +26,10 @@ public class Productos
     [Required(ErrorMessage = "El precio de venta es obligatorio")]
     [Range(0, 999999, ErrorMessage = "El precio de venta debe estar entre 0 y 999999")]
     public decimal PrecioVenta { get; set; }
-    public int EstadoId { get; set; }
 
     public string? Descripcion { get; set; }
 
-    public string? Imagen { get; set; }
+    public string Imagen { get; set; }
 
     [Required(ErrorMessage = "La categoría es obligatoria")]
     public int CategoriaId { get; set; }
@@ -35,15 +37,7 @@ public class Productos
     [Required(ErrorMessage = "El proveedor es obligatorio")]
     public int ProveedorId { get; set; }
 
-    [JsonIgnore]
-    [ForeignKey("CategoriaId")]
-    public virtual Categoria? Categoria { get; set; }
+   public int EstadoId { get; set; }
+    }
 
-    [JsonIgnore]
-    [ForeignKey("ProveedorId")]
-    public virtual Proveedor? Proveedor { get; set; }
-
-    [JsonIgnore]
-    [ForeignKey("EstadoId")]
-    public virtual EstadoUsuario Estado { get; set; }
 }

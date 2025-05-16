@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using TiendaKeytlin.Server.Data;
@@ -11,9 +12,11 @@ using TiendaKeytlin.Server.Data;
 namespace TiendaKeytlin.Server.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250516034537_productoscamposactualizados")]
+    partial class productoscamposactualizados
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -42,8 +45,8 @@ namespace TiendaKeytlin.Server.Migrations
                         .HasMaxLength(500)
                         .HasColumnType("character varying(500)");
 
-                    b.Property<int>("EstadoId")
-                        .HasColumnType("integer");
+                    b.Property<bool>("Estado")
+                        .HasColumnType("boolean");
 
                     b.Property<string>("Imagen")
                         .HasMaxLength(255)
@@ -68,11 +71,12 @@ namespace TiendaKeytlin.Server.Migrations
                     b.Property<int>("ProveedorId")
                         .HasColumnType("integer");
 
+                    b.Property<int>("Stock")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CategoriaId");
-
-                    b.HasIndex("EstadoId");
 
                     b.HasIndex("ProveedorId");
 
@@ -1098,12 +1102,6 @@ namespace TiendaKeytlin.Server.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("TiendaKeytlin.Server.Models.EstadoUsuario", "Estado")
-                        .WithMany()
-                        .HasForeignKey("EstadoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("TiendaKeytlin.Server.Models.Proveedor", "Proveedor")
                         .WithMany("Productos")
                         .HasForeignKey("ProveedorId")
@@ -1111,8 +1109,6 @@ namespace TiendaKeytlin.Server.Migrations
                         .IsRequired();
 
                     b.Navigation("Categoria");
-
-                    b.Navigation("Estado");
 
                     b.Navigation("Proveedor");
                 });
