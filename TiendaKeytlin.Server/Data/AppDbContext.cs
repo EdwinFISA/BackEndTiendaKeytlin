@@ -17,9 +17,10 @@ namespace TiendaKeytlin.Server.Data
         public DbSet<Proveedor> Proveedores { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Productos> Productos { get; set; }
+        public DbSet<Venta> Ventas { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            // Insertar datos iniciales para Estados
+        {                                              
+            // Insertar datos iniciales para Estados   
             modelBuilder.Entity<EstadoUsuario>().HasData(
                 new EstadoUsuario { Id = 1, Nombre = "Activo" },
                 new EstadoUsuario { Id = 2, Nombre = "Inactivo" },
@@ -258,7 +259,42 @@ namespace TiendaKeytlin.Server.Data
                 .HasForeignKey(p => p.ProveedorId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            // Producto - Estado (muchos-a-uno)
+            // Configuraciones para Venta y DetalleVenta
+            modelBuilder.Entity<Venta>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.FechaVenta).IsRequired();
+                entity.Property(e => e.Subtotal).HasColumnType("decimal(18,2)").IsRequired();
+                entity.Property(e => e.Total).HasColumnType("decimal(18,2)").IsRequired();
+                entity.Property(e => e.MontoRecibido).HasColumnType("decimal(18,2)").IsRequired();
+                entity.Property(e => e.Cambio).HasColumnType("decimal(18,2)").IsRequired();
+
+                // Relación con Vendedor (Usuario)
+                entity.HasOne(e => e.Vendedor)
+                      .WithMany()
+                      .HasForeignKey(e => e.VendedorId)
+                      .OnDelete(DeleteBehavior.Restrict);
+            });
+
+            modelBuilder.Entity<DetalleVenta>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.Cantidad).IsRequired();
+                entity.Property(e => e.PrecioUnitario).HasColumnType("decimal(18,2)").IsRequired();
+                entity.Property(e => e.Subtotal).HasColumnType("decimal(18,2)").IsRequired();
+
+                // Relación con Venta
+                entity.HasOne(e => e.Venta)
+                      .WithMany(v => v.DetallesVenta)
+                      .HasForeignKey(e => e.VentaId)
+                      .OnDelete(DeleteBehavior.Cascade);
+
+                // Relación con Producto
+                entity.HasOne(e => e.Producto)
+                      .WithMany()
+                      .HasForeignKey(e => e.ProductoId)
+                      .OnDelete(DeleteBehavior.Restrict);
+            });
         }
     }
 }

@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using TiendaKeytlin.Server.Data;
@@ -11,9 +12,11 @@ using TiendaKeytlin.Server.Data;
 namespace TiendaKeytlin.Server.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250516171914_Productos1")]
+    partial class Productos1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -127,38 +130,6 @@ namespace TiendaKeytlin.Server.Migrations
                     b.HasIndex("EstadoUsuarioId");
 
                     b.ToTable("Categorias");
-                });
-
-            modelBuilder.Entity("TiendaKeytlin.Server.Models.DetalleVenta", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("Cantidad")
-                        .HasColumnType("integer");
-
-                    b.Property<decimal>("PrecioUnitario")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<int>("ProductoId")
-                        .HasColumnType("integer");
-
-                    b.Property<decimal>("Subtotal")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<int>("VentaId")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProductoId");
-
-                    b.HasIndex("VentaId");
-
-                    b.ToTable("DetalleVenta");
                 });
 
             modelBuilder.Entity("TiendaKeytlin.Server.Models.Empresa", b =>
@@ -1117,42 +1088,6 @@ namespace TiendaKeytlin.Server.Migrations
                     b.ToTable("Usuarios");
                 });
 
-            modelBuilder.Entity("TiendaKeytlin.Server.Models.Venta", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<decimal>("Cambio")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<DateTime>("FechaVenta")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<decimal>("MontoRecibido")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("Observaciones")
-                        .HasColumnType("text");
-
-                    b.Property<decimal>("Subtotal")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<decimal>("Total")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<int>("VendedorId")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("VendedorId");
-
-                    b.ToTable("Ventas");
-                });
-
             modelBuilder.Entity("Productos", b =>
                 {
                     b.HasOne("TiendaKeytlin.Server.Models.Categoria", "Categoria")
@@ -1189,25 +1124,6 @@ namespace TiendaKeytlin.Server.Migrations
                         .IsRequired();
 
                     b.Navigation("EstadoUsuario");
-                });
-
-            modelBuilder.Entity("TiendaKeytlin.Server.Models.DetalleVenta", b =>
-                {
-                    b.HasOne("Productos", "Producto")
-                        .WithMany()
-                        .HasForeignKey("ProductoId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("TiendaKeytlin.Server.Models.Venta", "Venta")
-                        .WithMany("DetallesVenta")
-                        .HasForeignKey("VentaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Producto");
-
-                    b.Navigation("Venta");
                 });
 
             modelBuilder.Entity("TiendaKeytlin.Server.Models.Permiso", b =>
@@ -1255,17 +1171,6 @@ namespace TiendaKeytlin.Server.Migrations
                     b.Navigation("Rol");
                 });
 
-            modelBuilder.Entity("TiendaKeytlin.Server.Models.Venta", b =>
-                {
-                    b.HasOne("TiendaKeytlin.Server.Models.Usuario", "Vendedor")
-                        .WithMany()
-                        .HasForeignKey("VendedorId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Vendedor");
-                });
-
             modelBuilder.Entity("RolUsuario", b =>
                 {
                     b.Navigation("Permisos");
@@ -1286,11 +1191,6 @@ namespace TiendaKeytlin.Server.Migrations
             modelBuilder.Entity("TiendaKeytlin.Server.Models.Proveedor", b =>
                 {
                     b.Navigation("Productos");
-                });
-
-            modelBuilder.Entity("TiendaKeytlin.Server.Models.Venta", b =>
-                {
-                    b.Navigation("DetallesVenta");
                 });
 #pragma warning restore 612, 618
         }
